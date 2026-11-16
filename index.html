@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff8f1">
+    <meta name="description" content="Prototype lựa chọn giao hàng hoặc nhận tại cửa hàng cho Abby.">
+    <title>Thông tin nhận hàng | Abby</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#" aria-label="Abby - trang chủ">
+          <span class="brand-mark" aria-hidden="true">a</span>
+          <span>abby<span class="brand-period">.</span></span>
+          <span class="demo-label">DEMO</span>
+        </a>
+        <div class="header-title">
+          <span class="eyebrow">GIỎ HÀNG CỦA BẠN</span>
+          <h1>Thông tin nhận hàng</h1>
+        </div>
+        <div class="header-help">
+          <span class="help-icon" aria-hidden="true">?</span>
+          <span>Cần hỗ trợ?</span>
+        </div>
+      </div>
+      <nav class="checkout-progress" aria-label="Tiến trình đặt hàng">
+        <ol>
+          <li class="progress-step is-complete"><span class="step-number">✓</span><span>Giỏ hàng</span></li>
+          <li class="progress-line is-complete"></li>
+          <li class="progress-step is-current" aria-current="step"><span class="step-number">2</span><span>Nhận hàng</span></li>
+          <li class="progress-line"></li>
+          <li class="progress-step"><span class="step-number">3</span><span>Xác nhận</span></li>
+        </ol>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">BƯỚC 2 / 3</p>
+          <h2>Chọn cách bạn muốn nhận hàng</h2>
+          <p class="muted">Chọn hình thức phù hợp và điền thông tin bên dưới nhé.</p>
+        </div>
+        <div class="secure-note"><span aria-hidden="true">●</span> Thông tin của bạn được bảo mật</div>
+      </div>
+
+      <div class="checkout-layout">
+        <div class="main-column">
+          <section class="panel cart-panel" aria-labelledby="cart-heading">
+            <div class="section-heading">
+              <div>
+                <span class="section-kicker">01 · ĐƠN HÀNG</span>
+                <h2 id="cart-heading">Giỏ hàng <span class="item-count" id="item-count">(4 sản phẩm)</span></h2>
+              </div>
+              <span class="edit-cart-label">Giỏ hàng mẫu</span>
+            </div>
+            <div class="cart-list" id="cart-list" aria-live="polite"></div>
+            <div class="cart-total">
+              <span>Tổng tiền hàng</span>
+              <strong id="cart-total">0₫</strong>
+            </div>
+            <p class="demo-disclaimer">Sản phẩm và giá trong giỏ là dữ liệu minh họa, không phải giá bán được xác minh từ Abby.</p>
+          </section>
+
+          <section class="panel fulfillment-panel" aria-labelledby="fulfillment-heading">
+            <div class="section-heading">
+              <div>
+                <span class="section-kicker">02 · HÌNH THỨC</span>
+                <h2 id="fulfillment-heading">Bạn muốn nhận hàng thế nào?</h2>
+              </div>
+            </div>
+
+            <div class="method-options" role="radiogroup" aria-label="Hình thức nhận hàng">
+              <label class="method-card is-selected" data-method-card="delivery">
+                <input type="radio" name="fulfillment" value="delivery" checked>
+                <span class="method-icon delivery-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none"><path d="M5 13h23v21H5zM28 21h8l7 8v5H28z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="14" cy="36" r="4" fill="white" stroke="currentColor" stroke-width="2.4"/><circle cx="36" cy="36" r="4" fill="white" stroke="currentColor" stroke-width="2.4"/><path d="M33 21v8h10" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="method-copy"><strong>Giao hàng tận nơi</strong><small>Nhận sản phẩm tại địa chỉ của bạn</small></span>
+                <span class="radio-indicator" aria-hidden="true"></span>
+              </label>
+              <label class="method-card" data-method-card="pickup">
+                <input type="radio" name="fulfillment" value="pickup">
+                <span class="method-icon store-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none"><path d="M8 20h32v22H8zM5 20l4-13h30l4 13" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M5 20c0 3 2 5 5 5s5-2 5-5c0 3 2 5 5 5s5-2 5-5c0 3 2 5 5 5s5-2 5-5c0 3 2 5 5 5s5-2 5-5M18 42V30h12v12" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="method-copy"><strong>Nhận tại cửa hàng</strong><small>Chủ động đến cửa hàng Abby đã chọn</small></span>
+                <span class="radio-indicator" aria-hidden="true"></span>
+              </label>
+            </div>
+
+            <section class="fulfillment-content" id="delivery-section" aria-labelledby="delivery-heading">
+              <div class="subsection-heading">
+                <span class="subsection-icon" aria-hidden="true">⌂</span>
+                <div><h3 id="delivery-heading">Thông tin người nhận</h3><p>Điền địa chỉ để chúng tôi giao hàng đến bạn.</p></div>
+              </div>
+              <form id="delivery-form" novalidate>
+                <div class="form-grid">
+                  <div class="field field-full">
+                    <label for="recipient-name">Họ và tên <span>*</span></label>
+                    <input id="recipient-name" name="name" autocomplete="name" placeholder="Ví dụ: Nguyễn Minh Anh" required>
+                    <small class="field-error" id="name-error"></small>
+                  </div>
+                  <div class="field">
+                    <label for="recipient-phone">Số điện thoại <span>*</span></label>
+                    <input id="recipient-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx" required>
+                    <small class="field-error" id="phone-error"></small>
+                  </div>
+                  <div class="field">
+                    <label for="recipient-city">Tỉnh / thành phố <span>*</span></label>
+                    <input id="recipient-city" name="city" autocomplete="address-level1" placeholder="Ví dụ: TP. Hồ Chí Minh" required>
+                    <small class="field-error" id="city-error"></small>
+                  </div>
+                  <div class="field">
+                    <label for="recipient-district">Quận / huyện <span>*</span></label>
+                    <input id="recipient-district" name="district" autocomplete="address-level2" placeholder="Ví dụ: Quận 1" required>
+                    <small class="field-error" id="district-error"></small>
+                  </div>
+                  <div class="field">
+                    <label for="recipient-address">Địa chỉ cụ thể <span>*</span></label>
+                    <input id="recipient-address" name="address" autocomplete="street-address" placeholder="Số nhà, tên đường, phường / xã" required>
+                    <small class="field-error" id="address-error"></small>
+                  </div>
+                  <div class="field field-full">
+                    <label for="recipient-note">Ghi chú <span class="optional">(không bắt buộc)</span></label>
+                    <textarea id="recipient-note" name="note" rows="3" placeholder="Hướng dẫn giao hàng, thời gian nhận..."></textarea>
+                  </div>
+                </div>
+              </form>
+            </section>
+
+            <section class="fulfillment-content store-section" id="pickup-section" aria-labelledby="pickup-heading" hidden>
+              <div class="subsection-heading">
+                <span class="subsection-icon store-sub-icon" aria-hidden="true">⌖</span>
+                <div><h3 id="pickup-heading">Chọn cửa hàng nhận hàng</h3><p>Chọn khu vực và cửa hàng thuận tiện với bạn.</p></div>
+              </div>
+              <div class="store-controls">
+                <div class="region-tabs" role="group" aria-label="Lọc cửa hàng theo khu vực">
+                  <button class="region-button is-active" type="button" data-region="Hồ Chí Minh" aria-pressed="true">TP. Hồ Chí Minh <span>9</span></button>
+                  <button class="region-button" type="button" data-region="Hà Nội" aria-pressed="false">Hà Nội <span>7</span></button>
+                </div>
+                <label class="store-search">
+                  <span class="visually-hidden">Tìm cửa hàng theo tên hoặc địa chỉ</span>
+                  <span aria-hidden="true">⌕</span>
+                  <input id="store-search" type="search" placeholder="Tìm tên hoặc địa chỉ cửa hàng...">
+                </label>
+              </div>
+              <p class="store-count" id="store-count" aria-live="polite"></p>
+              <div class="store-list" id="store-list" aria-live="polite"></div>
+              <p class="store-data-note">Danh sách minh họa theo dữ liệu được cung cấp; không phản ánh tồn kho thực tế.</p>
+            </section>
+          </section>
+        </div>
+
+        <aside class="summary-column" aria-label="Tóm tắt đơn hàng">
+          <section class="panel summary-panel">
+            <div class="section-heading">
+              <div><span class="section-kicker">TÓM TẮT</span><h2>Đơn hàng của bạn</h2></div>
+            </div>
+            <div class="summary-products">
+              <span><span class="summary-dot"></span>Tạm tính sản phẩm</span>
+              <strong id="summary-subtotal">0₫</strong>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-delivery">
+              <span class="summary-label">HÌNH THỨC NHẬN HÀNG</span>
+              <div class="summary-method"><span class="summary-method-icon" id="summary-method-icon" aria-hidden="true">↗</span><strong id="summary-method">Giao hàng tận nơi</strong></div>
+              <p id="summary-destination" class="summary-destination">Vui lòng nhập địa chỉ giao hàng.</p>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-total"><span>Tổng cộng</span><strong id="summary-total">0₫</strong></div>
+            <p class="shipping-note"><span aria-hidden="true">ⓘ</span> Phí giao hàng (nếu có) sẽ được xác nhận sau.</p>
+            <button class="confirm-button" id="confirm-button" type="button">
+              Xác nhận thông tin nhận hàng <span aria-hidden="true">→</span>
+            </button>
+            <p class="terms-note">Bằng việc xác nhận, bạn đồng ý với các điều khoản sử dụng của bản demo.</p>
+            <div class="confirmation-message" id="confirmation-message" role="status" aria-live="polite" hidden></div>
+          </section>
+          <div class="help-card"><span class="help-card-icon" aria-hidden="true">♡</span><div><strong>Cần Abby hỗ trợ?</strong><p>Đội ngũ hỗ trợ luôn sẵn sàng giúp bạn.</p></div><span aria-hidden="true">→</span></div>
+        </aside>
+      </div>
+      <footer class="site-footer">© 2026 Abby Delivery & Store Pickup UI <span>·</span> Bản mô phỏng phục vụ mục đích học tập</footer>
+    </main>
+  </body>
+</html>
